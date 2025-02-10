@@ -24,7 +24,7 @@ export const createCourse = async (req, res) => {
         console.error(err)
         return res.status(500).send({ message: 'Error creating course', err })
     }
-};
+}
 
 export const editCourse = async (req, res) => {
     try {

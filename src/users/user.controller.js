@@ -6,11 +6,11 @@ export const registerStudent = async (req, res) => {
     try {
         let data = req.body
 
-        // Crear el objeto del modelo agregándole los datos capturados
+       
         let user = new User(data)
         user.password = await encrypt(user.password)
 
-        // Asignar rol de estudiante por defecto
+       
         user.role = 'STUDENT_ROLE'
 
         await user.save()
@@ -31,11 +31,11 @@ export const registerTeacher = async (req, res) => {
     try {
         let data = req.body
 
-        // Crear el objeto del modelo agregándole los datos capturados
+        
         let user = new User(data)
         user.password = await encrypt(user.password)
 
-        // Asignar rol de maestro
+       
         user.role = 'TEACHER_ROLE'
 
         await user.save()
