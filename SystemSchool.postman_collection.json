@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "fbdff246-f755-43f5-8da2-db6f1bea1725",
+		"name": "SystemSchool",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956984"
+	},
+	"item": [
+		{
+			"name": "Curso",
+			"item": [
+				{
+					"name": "Registrar Curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "courseName",
+									"value": "Ingles",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Area dedicada a un idioma para la mejora de nuestros alumnos.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/course/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"course",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Registrarse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "diego",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "franco",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "fdiego",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "diego@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diego/mm",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "41662867",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loggin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "diego2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diego/mm",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profesores",
+			"item": [
+				{
+					"name": "Registrarse Profesores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Antonio",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Marroquin",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Antonio",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "diego@gmail.com121",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diego/mm",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "41662867",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/users/registerTeacher",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"users",
+								"registerTeacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Curso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5ODU1MmIxYTY0ZmZhMjZlMmNjOTQiLCJ1c2VybmFtZSI6ImFudG9uaW8iLCJuYW1lIjoiQW50b25pbyIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxNjI5ODksImV4cCI6MTczOTE3Mzc4OX0.BnHr5nPnkBAi1YUxaXGHRfPSMx6HMF0DZmwVbvnvlko",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "courseName",
+									"value": "Ingles",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Nos ayuda a que nuestros alumnos aprendan el idioma de forma que les ayude en su futuro.",
+									"type": "text"
+								},
+								{
+									"key": "teacher",
+									"value": "67a98552b1a64ffa26e2cc94",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/teacher/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"teacher",
+								"create"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Curso",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5ODU1MmIxYTY0ZmZhMjZlMmNjOTQiLCJ1c2VybmFtZSI6ImFudG9uaW8iLCJuYW1lIjoiQW50b25pbyIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxNjI5ODksImV4cCI6MTczOTE3Mzc4OX0.BnHr5nPnkBAi1YUxaXGHRfPSMx6HMF0DZmwVbvnvlko",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "courseName",
+									"value": "Kaqchikel",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/teacher/edit/67a985a5b1a64ffa26e2cc98",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"teacher",
+								"edit",
+								"67a985a5b1a64ffa26e2cc98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5ODU1MmIxYTY0ZmZhMjZlMmNjOTQiLCJ1c2VybmFtZSI6ImFudG9uaW8iLCJuYW1lIjoiQW50b25pbyIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxNjI5ODksImV4cCI6MTczOTE3Mzc4OX0.BnHr5nPnkBAi1YUxaXGHRfPSMx6HMF0DZmwVbvnvlko",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/teacher/delete/67a98505b1a64ffa26e2cc92",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"teacher",
+								"delete",
+								"67a98505b1a64ffa26e2cc92"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Cursos Profesor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2QwMjg4MjAyZmMxNThlYTkyN2MiLCJ1c2VybmFtZSI6ImRpZWdvMSIsIm5hbWUiOiJkaWVnbyIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxNjA4NDMsImV4cCI6MTczOTE3MTY0M30.kVNpslrPO2-zXfOfIFuwWaobm-k9YwHibBR74Y8ESXo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/teacher/list/67a98505b1a64ffa26e2cc92",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"teacher",
+								"list",
+								"67a98505b1a64ffa26e2cc92"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loggin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "Antonio",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diego/mm",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alumnos",
+			"item": [
+				{
+					"name": "Registrarse Alumno",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "diego",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "frnaco",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "diego2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "diego@gmail.com2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diego/mm",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "41662867",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/users/registerStudent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"users",
+								"registerStudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarCursos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5ODY5OGIxYTY0ZmZhMjZlMmNjYTYiLCJ1c2VybmFtZSI6ImRpZWdvMiIsIm5hbWUiOiJkaWVnbyIsInJvbGUiOiJTVFVERU5UX1JPTEUiLCJpYXQiOjE3MzkxNjM1NTAsImV4cCI6MTczOTE3NDM1MH0.8ofGmINnwnsizcGhM58qW-KQLaxo2NbeBeOqnN5oVC4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/student/67a98698b1a64ffa26e2cca6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"student",
+								"67a98698b1a64ffa26e2cca6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Curso",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5ODY5OGIxYTY0ZmZhMjZlMmNjYTYiLCJ1c2VybmFtZSI6ImRpZWdvMiIsIm5hbWUiOiJkaWVnbyIsInJvbGUiOiJTVFVERU5UX1JPTEUiLCJpYXQiOjE3MzkxNjM1NTAsImV4cCI6MTczOTE3NDM1MH0.8ofGmINnwnsizcGhM58qW-KQLaxo2NbeBeOqnN5oVC4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "67a98698b1a64ffa26e2cca6",
+									"type": "text"
+								},
+								{
+									"key": "courseId",
+									"value": "67a985a5b1a64ffa26e2cc98",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/student/assign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"student",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar alumno",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5ODY5OGIxYTY0ZmZhMjZlMmNjYTYiLCJ1c2VybmFtZSI6ImRpZWdvMiIsIm5hbWUiOiJkaWVnbyIsInJvbGUiOiJTVFVERU5UX1JPTEUiLCJpYXQiOjE3MzkxNjMzMTUsImV4cCI6MTczOTE3NDExNX0.WVqb-rClg5GByPExXFQonYcKyJ9s_L-wMUSQbfv3DiA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "aaa",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "franco",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "aaa@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "49414985",
+									"type": "text"
+								},
+								{
+									"key": "courses",
+									"value": "67a95013f6ddfdbea1c20108",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/v1/student/67a98552b1a64ffa26e2cc94",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"student",
+								"67a98552b1a64ffa26e2cc94"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2QwMjg4MjAyZmMxNThlYTkyN2MiLCJ1c2VybmFtZSI6ImRpZWdvMSIsIm5hbWUiOiJkaWVnbyIsInJvbGUiOiJURUFDSEVSX1JPTEUiLCJpYXQiOjE3MzkxNjA4NDMsImV4cCI6MTczOTE3MTY0M30.kVNpslrPO2-zXfOfIFuwWaobm-k9YwHibBR74Y8ESXo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:2636/v1/student/67a98505b1a64ffa26e2cc92",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"student",
+								"67a98505b1a64ffa26e2cc92"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loggin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userLoggin",
+									"value": "diego2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "diego/mm",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:2636/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Contraseña",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5NzUzZTBjZjdiZjI3MWJlODZlOGMiLCJ1c2VybmFtZSI6ImRpZWdvMiIsIm5hbWUiOiJkaWVnbyIsInJvbGUiOiJTVFVERU5UX1JPTEUiLCJpYXQiOjE3MzkxNTkzNzMsImV4cCI6MTczOTE3MDE3M30.2T6h2-ZaPdKMRQIAK0h8LS_zIGg78LyQ51T0hbZ5dPk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "diego/mm",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "diego/mmp",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/student/pass/67a9753e0cf7bf271be86e8c",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"student",
+								"pass",
+								"67a9753e0cf7bf271be86e8c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
